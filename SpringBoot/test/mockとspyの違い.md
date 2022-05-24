@@ -18,7 +18,7 @@ spyは一部の振る舞いを変えたうえで他のクラスに食わせて�
 ## 例
 ### テスト対象
 
-```
+```java
 package mock;
 
 public class Hoge {
@@ -38,7 +38,7 @@ public class Hoge {
 ```
 ### テストコード
 
-```
+```java
 package mock;
  
 import org.junit.jupiter.api.Test;
