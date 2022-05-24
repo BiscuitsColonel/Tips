@@ -1,6 +1,6 @@
 ## テスト用ファイル
 
-```
+```sh
 $ cat a.txt
 1 ls
 2 touch test
@@ -12,7 +12,7 @@ $ cat a.txt
 
 ### 最初のフィールドを除外する場合
 
-```
+```sh
 $ awk '{$1="";print $0}' a.txt
  ls
  touch test
@@ -21,7 +21,7 @@ $ awk '{$1="";print $0}' a.txt
 ```
 ### 最後のフィールドを除外する場合
 
-```
+```sh
 $ awk '{$NF="";print $0}' a.txt
 1 
 2 touch 
