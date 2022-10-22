@@ -1,0 +1,2 @@
+S3などを使ったローカル開発はlocalstackを使う
+https://github.com/localstack/localstack

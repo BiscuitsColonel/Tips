@@ -1,0 +1,1 @@
+(time ${some_command} 1>/dev/null 2>&1) 2>&1
