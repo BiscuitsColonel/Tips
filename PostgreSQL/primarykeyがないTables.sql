@@ -1,3 +1,4 @@
+```sql
 select tab.table_schema,
        tab.table_name
 from information_schema.tables tab
@@ -10,3 +11,4 @@ where tab.table_type = 'BASE TABLE'
       and tco.constraint_name is null
 order by table_schema,
          table_name;
+```
