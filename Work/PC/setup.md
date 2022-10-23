@@ -1,10 +1,10 @@
 # インストール
-- [vscode](https://code.visualstudio.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
   - MS-CEINTL.vscode-language-pack-ja
   - hashicorp.terraform
   - [esbenp.prettier-vscode](https://zenn.dev/k_kazukiiiiii/articles/670ebae0005872)
   - [ms-vscode-remote.remote-ssh](https://zenn.dev/bon/articles/vscode-remote-ssh)
-- [brew](https://brew.sh/index_ja)
+- [Homebrew](https://brew.sh/index_ja)
   - brew install peco
   - brew install --cask docker
   - brew install awscli
