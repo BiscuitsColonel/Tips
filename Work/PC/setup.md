@@ -250,3 +250,12 @@ login-dev  = ssm start-session --target DEVELOP_EC2_ID
 login-stg  = ssm start-session --target STG_EC2_ID
 login-prod = ssm start-session --target PROD_EC2_ID
 ```
+
+# SSH
+
+## ~/.ssh/config
+
+```
+Host i-* mi-*
+    ProxyCommand sh -c "aws --profile dev_bastion ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
+```
