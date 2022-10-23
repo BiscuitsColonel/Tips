@@ -19,7 +19,7 @@
   - brew install tfenv
     - tfenv use 0.14.9
 - [Eclipse](https://mergedoc.osdn.jp/pleiades-redirect/2022/pleiades_ultimate-mac_jre.zip.html?v=20221018)
-  - [フォーマッター](../../../IDE/Eclipse/formatter.xml)
+  - [フォーマッター](../../IDE/Eclipse/formatter.xml)
 - [Android Studio](https://developer.android.com/studio?hl=ja)
 
 # 環境変数
