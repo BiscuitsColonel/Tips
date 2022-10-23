@@ -91,12 +91,12 @@ mfa_serial=arn:aws:iam::DEVELOP:mfa/IAM_USER
 [profile dev_mfa]
 role_arn=arn:aws:iam::DEVELOP:role/ADMIN_ROLE
 region=ap-northeast-1
-source_profile=mfa
+source_profile=default
 
 [profile prod_mfa]
 role_arn=arn:aws:iam::PROD:role/ADMIN_ROLE
 region=ap-northeast-1
-source_profile=mfa 
+source_profile=default 
 
 [profile mfa-long-term]
 region = ap-northeast-1
