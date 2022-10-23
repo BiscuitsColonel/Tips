@@ -2,7 +2,7 @@
 少しググっただけでは見つけにくいIT知識をメモする。
 
 ```sh
-$ tree -N
+$ tree -I img -N
 .
 ├── AWS
 │   ├── Athena
@@ -31,14 +31,14 @@ $ tree -N
 ├── Github
 │   ├── Dependabotを導入.md
 │   ├── diffの取得.md
-│   ├── gitの基礎.md
-│   └── img
-│       ├── github-dependabot-checking.png
-│       ├── github-dependabot-insight-2.png
-│       └── github-dependabot-insight.png
+│   └── gitの基礎.md
 ├── IDE
 │   └── Eclipse
 │       └── eclipse_formatter.xml
+├── Language
+│   ├── Python
+│   │   └── 日付を使う.py
+│   └── 命名指針.md
 ├── README.md
 ├── ShellScript
 │   ├── awk
@@ -50,13 +50,6 @@ $ tree -N
 │   └── 標準出力と標準エラー出力の拾い方集.md
 ├── Slack
 │   ├── SlackAPIを使ってみる.md
-│   ├── img
-│   │   ├── app1.png
-│   │   ├── app2.png
-│   │   ├── app3.png
-│   │   ├── app4.png
-│   │   ├── app5.png
-│   │   └── app6.png
 │   └── mrkdwnについて.md
 ├── SpringBoot
 │   ├── mockとspyの違い.md
@@ -65,10 +58,9 @@ $ tree -N
 ├── Terraform
 │   ├── センシティブな値.md
 │   └── 高速化.md
-├── チーム
-│   └── ポストモーテムとレトロスペクティブ.md
-└── 言語
-    ├── Python
-    │   └── 日付を使う.py
-    └── 命名指針.md
+└── Work
+    ├── PC
+    │   └── setup.md
+    └── Team
+        └── ポストモーテムとレトロスペクティブ.md
 ```
