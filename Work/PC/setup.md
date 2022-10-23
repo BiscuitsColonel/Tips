@@ -1,3 +1,27 @@
+# インストール
+- [vscode](https://code.visualstudio.com/)
+  - MS-CEINTL.vscode-language-pack-ja
+  - hashicorp.terraform
+  - [esbenp.prettier-vscode](https://zenn.dev/k_kazukiiiiii/articles/670ebae0005872)
+  - [ms-vscode-remote.remote-ssh](https://zenn.dev/bon/articles/vscode-remote-ssh)
+- [brew](https://brew.sh/index_ja)
+  - brew install peco
+  - brew install --cask docker
+  - brew install awscli
+  - brew install aws-vault
+  - brew install aws-mfa
+  - brew install openjdk@11 openjdk@17
+  - brew install jenv
+    - jenv doctor
+    - jenv add `/usr/libexec/java_home -v "17"`
+    - jenv add `/usr/libexec/java_home -v "11"`
+    - jenv global 17.0
+  - brew install tfenv
+    - tfenv use 0.14.9
+- [Eclipse](https://mergedoc.osdn.jp/pleiades-redirect/2022/pleiades_ultimate-mac_jre.zip.html?v=20221018)
+  - [フォーマッター](../../../IDE/Eclipse/formatter.xml)
+- [Android Studio](https://developer.android.com/studio?hl=ja)
+
 # 環境変数
 
 ```
