@@ -65,6 +65,7 @@ $ aws configure
 ```
 [default]
 region=ap-northeast-1
+output=json
 
 [profile dev_bastion]
 role_arn=arn:aws:iam::DEVELOP:role/SSM_ROLE
@@ -99,8 +100,8 @@ region=ap-northeast-1
 source_profile=default
 
 [profile mfa]
-region = ap-northeast-1
-output = json
+region=ap-northeast-1
+output=json
 ```
 
 ## ~/.aws/cli/alias 
