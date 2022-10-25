@@ -316,10 +316,21 @@ login-prod = ssm start-session --target PROD_EC2_ID
 ```
 
 # SSH
-
 ## ~/.ssh/config
 
 ```
 Host i-* mi-*
     ProxyCommand sh -c "aws --profile dev_bastion ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
 ```
+
+# Github
+## ~/.netrc 
+
+```
+machine github.com
+login USERNAME
+password PASSWORD
+```
+## config
+ - git config --global user.email EMAIL
+ - git config --global user.name USERNAME 
