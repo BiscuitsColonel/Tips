@@ -11,7 +11,11 @@
   - brew install --cask docker
   - brew install awscli
   - brew install aws-vault
+    - aws-vault add dev_terraform
+    - aws-vault add prod_terraform
+    - aws-vault exec PROFILE -- commands
   - brew install aws-mfa
+    - aws-mfa --profile mfa --device arn:aws:iam::XXXXXXXXXXXX:mfa/USER
   - brew install openjdk@11 openjdk@17
   - brew install jenv
     - jenv doctor
