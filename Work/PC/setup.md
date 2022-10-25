@@ -10,6 +10,7 @@
   - brew install zsh-syntax-highlighting
   - brew install --cask docker
   - brew install awscli
+  - brew install session-manager-plugin
   - brew install aws-vault
     - aws-vault add dev_terraform
     - aws-vault add prod_terraform
