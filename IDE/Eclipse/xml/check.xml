@@ -122,7 +122,9 @@
 		<module name="MethodLength">
 			<property name="max" value="180" />
 		</module>
-		<module name="ParameterNumber" />
+		<module name="ParameterNumber">
+			<property name="max" value="20" />
+		</module>
 
 		<!-- Checks for whitespace -->
 		<!-- See https://checkstyle.org/config_whitespace.html -->
@@ -154,7 +156,10 @@
 		<!-- See https://checkstyle.org/config_coding.html -->
 		<module name="EmptyStatement" />
 		<module name="EqualsHashCode" />
-		<module name="HiddenField" />
+		<module name="HiddenField">
+			<property name="ignoreConstructorParameter" value="true"/>
+        	<property name="ignoreSetter" value="true"/>
+        </module>
 		<module name="IllegalInstantiation" />
 		<module name="InnerAssignment" />
 		<module name="MagicNumber" />
@@ -175,7 +180,5 @@
 		<module name="ArrayTypeStyle" />
 		<module name="TodoComment" />
 		<module name="UpperEll" />
-
 	</module>
-
 </module>
