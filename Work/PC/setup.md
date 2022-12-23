@@ -1,10 +1,10 @@
 # インストール
 - [Visual Studio Code](https://code.visualstudio.com/)
-  - MS-CEINTL.vscode-language-pack-ja
-  - hashicorp.terraform
-  - [esbenp.prettier-vscode](https://zenn.dev/k_kazukiiiiii/articles/670ebae0005872)
-  - [ms-vscode-remote.remote-ssh](https://zenn.dev/bon/articles/vscode-remote-ssh)
-  - hediet.vscode-drawio
+  - [MS-CEINTL.vscode-language-pack-ja](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja)
+  - [hashicorp.terraform](https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform)
+  - [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  - [ms-vscode-remote.remote-ssh](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+  - [hediet.vscode-drawio](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
 - [Homebrew](https://brew.sh/index_ja)
   - brew install peco
   - brew install zsh-autosuggestions
