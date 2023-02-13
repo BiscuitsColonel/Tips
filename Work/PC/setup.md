@@ -116,9 +116,9 @@ alias terraform_dev_plan='aws-vault exec dev_terraform -- terraform plan --paral
 alias terraform_dev_apply='aws-vault exec dev_terraform -- terraform apply --parallelism=30'
 alias terraform_prod_plan='aws-vault exec prod_terraform -- terraform plan --parallelism=30'
 alias terraform_prod_apply='aws-vault exec prod_terraform -- terraform apply --parallelism=30'
-alias login_dev='aws --profile dev_bastion login-dev'
-alias login_stg='aws --profile dev_bastion login-stg'
-alias login_prod='aws --profile prod_bastion login-prod'
+alias login_dev='aws --profile dev_bastion ssm start-session --target i-xxxxxxxxxx'
+alias login_stg='aws --profile dev_bastion ssm start-session --target i-xxxxxxxxxx'
+alias login_prod='aws --profile prod_bastion ssm start-session --target i-xxxxxxxxxx'
 alias gitman='(){git add . ; git commit -m "$1" ; git push}'
 # -------------------------------------------------
 ```
@@ -310,10 +310,6 @@ revoke-my-ip-all =
   !f() {
     aws revoke-my-ip ${1} all all
   }; f
-
-login-dev  = ssm start-session --target DEVELOP_EC2_ID
-login-stg  = ssm start-session --target STG_EC2_ID
-login-prod = ssm start-session --target PROD_EC2_ID
 ```
 
 # SSH
