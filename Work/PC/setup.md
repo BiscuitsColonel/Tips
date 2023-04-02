@@ -28,9 +28,9 @@
     - tfenv use 0.14.9
   - brew install nodebrew
     - nodebrew install-binary latest
-- [Eclipse](https://mergedoc.osdn.jp/pleiades-redirect/2022/pleiades_ultimate-mac_jre.zip.html?v=20221018)
-  - [フォーマッター](../../IDE/Eclipse/formatter.xml)
+- [Eclipse](https://mergedoc.osdn.jp/)
 - [Android Studio](https://developer.android.com/studio?hl=ja)
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
 
 # .zshrc
 
