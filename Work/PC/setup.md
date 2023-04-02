@@ -27,7 +27,8 @@
   - brew install tfenv
     - tfenv use 0.14.9
   - brew install nodebrew
-    - nodebrew install-binary latest
+    - nodebrew setup_dirs
+    - nodebrew install-binary stable
 - [Eclipse](https://mergedoc.osdn.jp/)
 - [Android Studio](https://developer.android.com/studio?hl=ja)
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
