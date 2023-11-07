@@ -6,6 +6,7 @@
   - [ms-vscode-remote.remote-ssh](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
   - [hediet.vscode-drawio](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
 - [Homebrew](https://brew.sh/index_ja)
+  - brew install --cask background-music
   - brew install peco
   - brew install zsh-autosuggestions
   - brew install zsh-syntax-highlighting
