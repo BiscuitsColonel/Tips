@@ -21,7 +21,8 @@
     - aws-vault exec PROFILE -- commands
   - brew install aws-mfa
     - aws-mfa --profile mfa --device arn:aws:iam::XXXXXXXXXXXX:mfa/USER
-  - brew install openjdk@11 openjdk@17 
+  - brew install go
+  - brew install openjdk@11 openjdk@17
   - brew install jenv
     - jenv doctor
     - jenv add $(/usr/libexec/java_home -v "17")
