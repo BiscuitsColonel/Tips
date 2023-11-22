@@ -13,13 +13,15 @@
   - brew install --cask docker
   - brew install awscli
   - brew install session-manager-plugin
+  - brew install grep gawk gzip gnu-tar gnu-sed gnu-time gnu-getopt
+  - brew install binutils findutils diffutils coreutils moreutils
   - brew install aws-vault
     - aws-vault add dev_terraform
     - aws-vault add prod_terraform
     - aws-vault exec PROFILE -- commands
   - brew install aws-mfa
     - aws-mfa --profile mfa --device arn:aws:iam::XXXXXXXXXXXX:mfa/USER
-  - brew install openjdk@11 openjdk@17
+  - brew install openjdk@11 openjdk@17 
   - brew install jenv
     - jenv doctor
     - jenv add $(/usr/libexec/java_home -v "17")
