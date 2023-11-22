@@ -22,8 +22,8 @@
   - brew install openjdk@11 openjdk@17
   - brew install jenv
     - jenv doctor
-    - jenv add `/usr/libexec/java_home -v "17"`
-    - jenv add `/usr/libexec/java_home -v "11"`
+    - jenv add $(/usr/libexec/java_home -v "17")
+    - jenv add $(/usr/libexec/java_home -v "11")
     - jenv global 17.0
   - brew install tfenv
     - tfenv use 0.14.9
