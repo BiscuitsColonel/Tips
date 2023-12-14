@@ -5,6 +5,8 @@
   - [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
   - [ms-vscode-remote.remote-ssh](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
   - [hediet.vscode-drawio](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
+  - [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi)
+  - [openapi-lint](https://marketplace.visualstudio.com/items?itemName=mermade.openapi-lint)
 - [Homebrew](https://brew.sh/index_ja)
   - brew install --cask background-music
   - brew install peco
