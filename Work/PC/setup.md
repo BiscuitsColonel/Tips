@@ -18,7 +18,7 @@
   - brew install --cask docker
   - brew install awscli
   - brew install session-manager-plugin
-  - brew install grep gawk gzip gnu-tar gnu-sed gnu-time gnu-getopt
+  - brew install grep gawk gzip gnu-tar gnu-sed gnu-time gnu-getopt jq
   - brew install binutils findutils diffutils coreutils moreutils
   - brew install aws-vault
     - aws-vault add dev_terraform
