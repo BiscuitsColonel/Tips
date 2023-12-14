@@ -8,6 +8,11 @@
 - [Homebrew](https://brew.sh/index_ja)
   - brew install --cask background-music
   - brew install peco
+  - brew install --cask intellij-idea-ce
+  - brew install --cask visual-studio-code
+  - brew install --cask pgadmin4
+  - brew install --cask android-studio
+  - brew install --cask slack
   - brew install zsh-autosuggestions
   - brew install zsh-syntax-highlighting
   - brew install --cask docker
