@@ -27,14 +27,15 @@
   - brew install aws-mfa
     - aws-mfa --profile mfa --device arn:aws:iam::XXXXXXXXXXXX:mfa/USER
   - brew install go
-  - brew install openjdk@11 openjdk@17
+  - brew install openjdk@11 openjdk@17 openjdk@21
   - brew install jenv
     - jenv doctor
-    - jenv add $(/usr/libexec/java_home -v "17")
-    - jenv add $(/usr/libexec/java_home -v "11")
-    - jenv global 17.0
+    - jenv add /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home
+    - jenv add /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
+    - jenv add /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+    - jenv global 21.0
   - brew install tfenv
-    - tfenv use 0.14.9
+    - tfenv use 1.6.5
   - brew install nodebrew
     - nodebrew setup_dirs
     - nodebrew setup
@@ -96,6 +97,15 @@ function terminal-color () {
 # -------------------------------------------------
 
 # -------------------------------------------------
+# jEnv
+export JENV_ROOT="$HOME/.jenv"
+if [ -d "${JENV_ROOT}" ]; then
+  export PATH="$JENV_ROOT/bin:$PATH"
+  eval "$(jenv init -)"
+fi
+# -------------------------------------------------
+
+# -------------------------------------------------
 # エイリアス
 alias la='ls -la'
 alias ll='ls -la'
@@ -108,7 +118,6 @@ alias terraform_prod_init='aws-vault exec prod_terraform -- terraform init -upgr
 alias login_dev='terminal-color "Pro" && aws --profile dev_bastion ssm start-session --target i-XXXXXXX ; terminal-color "Basic"'
 alias login_stg='terminal-color "Pro" && aws --profile dev_bastion ssm start-session --target i-YYYYYYY ; terminal-color "Basic"'
 alias login_prod='terminal-color "Novel" && aws --profile prod_bastion ssm start-session --target i-ZZZZZZZ ; terminal-color "Basic"'
-alias gitman='(){git add . ; git commit -m "$1" ; git push}'
 alias gitman='(){git add . ; git commit -m "$1" ; git push}'
 # -------------------------------------------------
 ```
