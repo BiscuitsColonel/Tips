@@ -7,6 +7,7 @@
   - [hediet.vscode-drawio](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
   - [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi)
   - [openapi-lint](https://marketplace.visualstudio.com/items?itemName=mermade.openapi-lint)
+  - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
 - [Homebrew](https://brew.sh/index_ja)
   - brew install --cask background-music
   - brew install peco
