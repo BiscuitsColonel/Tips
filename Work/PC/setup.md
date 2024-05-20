@@ -95,6 +95,14 @@ zle -N peco-select-history
 bindkey '^r' peco-select-history
 # -------------------------------------------------
 
+# -----------------------------
+# Terminal Log get
+if [ -z "$SCRIPT_STARTED" ]; then
+  export SCRIPT_STARTED=yes
+  script /Users/$USERNAME/terminal-log/`date "+%Y-%m-%d_%H%M%S"`.log
+fi
+# -----------------------------
+
 # -------------------------------------------------
 # 関数
 function terminal-color () {
