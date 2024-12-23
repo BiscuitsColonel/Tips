@@ -47,9 +47,6 @@
   - brew install pandoc
     - npm install --global mermaid-filter
     - pandoc README.md --from=markdown --to=docx --standalone --output=cloudhsm.docx --filter=mermaid-filter
-- [Eclipse](https://mergedoc.osdn.jp/)
-- [Android Studio](https://developer.android.com/studio?hl=ja)
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
 
 # .zshrc
 
