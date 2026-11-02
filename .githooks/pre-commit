@@ -1,0 +1,9 @@
+#!/bin/sh
+# public リポジトリなので、漏えい検査に通らないコミットを止める。
+# 有効にする: git config core.hooksPath .githooks （clone ごとに1回）
+cd "$(git rev-parse --show-toplevel)" || exit 1
+if ! out=$(python scripts/check-tips.py 2>&1); then
+  printf '%s\n' "$out"
+  echo "check-tips.py で問題が見つかったので、コミットを止めました。"
+  exit 1
+fi
