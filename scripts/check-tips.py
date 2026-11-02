@@ -5,8 +5,8 @@
 - 各 Tip の1行目が `# タイトル` か
 - 相対リンク・画像のリンク先が実在するか
 - README.md が scripts/gen-readme.py の生成結果と一致するか
-- 認証情報や実在の ID らしい文字列が無いか
-- .claude/sensitive-words.local.txt（git 管理外。1行1語）に書いた語が無いか
+- 認証情報や実在の ID らしい文字列が無いか（Tip だけでなく、設定ファイル・.claude も含む全テキストファイル）
+- .claude/sensitive-words.local.txt（git 管理外。1行1語）に書いた語が無いか（同上）
 """
 import os
 import re
@@ -38,6 +38,26 @@ def tips():
         yield f
 
 
+# 漏えい検査から外すもの。テストはダミーの認証情報をわざと置いている
+SCAN_SKIP = {".git", "__pycache__"}
+SCAN_SKIP_FILES = {".claude/sensitive-words.local.txt"}
+SCAN_SKIP_PREFIX = ("scripts/tests/",)
+
+
+def text_files():
+    for f in sorted(ROOT.rglob("*")):
+        rel = f.relative_to(ROOT)
+        if not f.is_file() or SCAN_SKIP & set(rel.parts):
+            continue
+        posix = rel.as_posix()
+        if posix in SCAN_SKIP_FILES or posix.startswith(SCAN_SKIP_PREFIX):
+            continue
+        try:
+            yield posix, f.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue  # 画像などのバイナリ
+
+
 def main():
     problems = []
     words = []
@@ -55,6 +75,8 @@ def main():
             target = url.split("#")[0]
             if target and not target.startswith(("http://", "https://", "mailto:")) and not (f.parent / target).exists():
                 problems.append(f"{rel}: リンク切れ {url}")
+
+    for rel, text in text_files():
         for no, line in enumerate(text.splitlines(), 1):
             if any(a in line for a in ALLOWED):
                 continue

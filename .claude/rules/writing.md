@@ -57,11 +57,14 @@ AI に聞けばすぐ出てくる内容は残さない。残すのは、AI が�
 
 ## 載せない情報
 
-このリポジトリには、勤務先の社内情報と認証情報を入れない。
+このリポジトリは public で公開している。勤務先の社内情報と認証情報を入れない。
+
+push した時点で公開される。あとからファイルを消しても、git の履歴と PR の差分（Files changed の削除行）に残り、誰でも読める。履歴は書き換えられるが、GitHub が PR のために保持している参照（`refs/pull/*`）は force push では消えない。消すにはリポジトリを作り直すか、GitHub Support に依頼するしかない。漏れを止められるのはコミットの前だけなので、`check-tips.py` はコミットのたびに通す。
 
 - 実在の AWS アカウント ID・バケット名・ロール名・社員のメールアドレス・社内リポジトリ名
 - アクセスキー・トークン・パスワード（失効済みのものも）
 - これらが写ったスクリーンショット
+- 設定ファイルのメタデータに残った名前。IDE のプロファイル名、エクスポートした設定の作成者、生成元のプロジェクト名など。本文を書き換えても見落としやすい（Eclipse のフォーマッタ設定のプロファイル名に、業務のプロジェクト名が残っていた例がある）
 
 例にはダミー値を使う。AWS アカウント ID は `123456789012`、バケットは `example-bucket`、ドメインは `example.com`。
 
@@ -89,7 +92,8 @@ README を作り直して Tip と同じコミットに含め、検査が通る�
 | 1行目が `# タイトル` | `scripts/check-tips.py` | recommend |
 | 相対リンクが切れていない | `scripts/check-tips.py` | recommend |
 | README が実ファイルと一致 | `scripts/check-tips.py`（生成結果と比較） | recommend |
-| 認証情報・実在の ID が無い | `scripts/check-tips.py`（AWS のキー・Slack トークン・秘密鍵・12桁の数字・平文パスワード） | recommend |
-| 勤務先・顧客の名前が無い | `scripts/check-tips.py` と `.claude/sensitive-words.local.txt` | recommend |
+| 認証情報・実在の ID が無い | `scripts/check-tips.py`（AWS のキー・Slack トークン・秘密鍵・12桁の数字・平文パスワード。Tip に限らず全テキストファイル） | recommend |
+| 勤務先・顧客の名前が無い | `scripts/check-tips.py` と `.claude/sensitive-words.local.txt`（全テキストファイル） | recommend |
+| 社名・プロジェクト名の書き方が違うもの、リストに無い名前 | 目視。コミット前に差分の固有名詞を見る | recommend |
 | AI で出せる一般論だけになっていない | 目視（上の「判断の例」） | recommend |
 | 時点依存の情報に日付がある | 目視 | recommend |

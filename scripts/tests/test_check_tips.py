@@ -91,6 +91,27 @@ class CheckTipsTest(unittest.TestCase):
         (self.root / ".claude" / "sensitive-words.local.txt").write_text("# comment\nexamplecorp\n", encoding="utf-8")
         self.assert_detects("# t\nExampleCorp の案件\n", "載せない語「examplecorp」")
 
+    def test_sensitive_word_in_non_markdown_file(self):
+        # 設定ファイルのメタデータ（プロファイル名など）に名前が紛れ込んだ実例への備え
+        (self.root / ".claude" / "sensitive-words.local.txt").write_text("examplecorp\n", encoding="utf-8")
+        self.write("IDE/xml/format.xml", '<profile name="Generated ExampleCorpGateway"/>\n')
+        code, out = self.run_check()
+        self.assertEqual(code, 1, out)
+        self.assertIn("IDE/xml/format.xml:1: 載せない語「examplecorp」", out)
+
+    def test_secret_in_claude_dir(self):
+        self.write(".claude/rules/note.md", "# n\nAKIAABCDEFGHIJKLMNOP\n")
+        code, out = self.run_check()
+        self.assertEqual(code, 1, out)
+        self.assertIn(".claude/rules/note.md:2: AWS アクセスキーの疑い", out)
+
+    def test_binary_file_is_skipped(self):
+        p = self.root / "Cat" / "img" / "a.png"
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_bytes(b"\x89PNG\r\n\x1a\n\xff\xfe\x00")
+        code, out = self.run_check()
+        self.assertEqual(code, 0, out)
+
     def test_readme_out_of_sync(self):
         self.write("Cat/新規.md", "# 新しい Tip\n")
         code, out = self.run_check()
