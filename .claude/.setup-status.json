@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "steps": {
+    "claude-md": {
+      "status": "completed",
+      "description": "CLAUDE.md 生成",
+      "notes": "個人のITメモ集。Intent と構成、ルールへの導線のみ"
+    },
+    "rules": {
+      "status": "completed",
+      "description": "ドメインルール",
+      "notes": ".claude/rules/writing.md（書き方・鮮度・載せない情報）"
+    },
+    "validation": {
+      "status": "completed",
+      "description": "検証機構整備",
+      "notes": "全項目 recommend。scripts/check-tips.py が見出し・リンク・README・認証情報・載せない語を検査"
+    },
+    "dart-code-smell": {
+      "status": "skipped",
+      "description": "Dart code smell 設定（Flutter/Dart のみ）",
+      "reason": "非 Flutter/Dart プロジェクト"
+    },
+    "ci": {
+      "status": "skipped",
+      "description": "CI設置（決定論ゲート + AIレビュー + 負債スキャン）",
+      "reason": "ドキュメントのみの個人リポジトリ。claude-review は組織の Bedrock・シークレット前提で個人アカウントでは動かない"
+    },
+    "tech-debt-scan": {
+      "status": "skipped",
+      "description": "技術的負債スキャン",
+      "reason": "コードを持たないドキュメントリポジトリで、Snyk の対象でもない"
+    },
+    "devcontainer": {
+      "status": "skipped",
+      "description": "DevContainer",
+      "reason": "ビルド・実行するコードが無い"
+    },
+    "repo-settings": {
+      "status": "skipped",
+      "description": "GitHub リポジトリ設定",
+      "reason": "1人で使う private リポジトリで、ブランチ保護で守る対象が無い"
+    },
+    "skills": {
+      "status": "completed",
+      "description": "プロジェクトスキル",
+      "notes": "import-tips（外部メモの取り込み・既存の整理の手順）。検査は scripts/check-tips.py"
+    },
+    "harness-bootstrap": {
+      "status": "skipped",
+      "description": "グローバルハーネス自動導入 hook",
+      "reason": "組織の .claude を clone した人のホームへ展開する hook で、個人リポジトリには置かない"
+    },
+    "meeting-sync-check": {
+      "status": "skipped",
+      "description": "会議メモからの反映漏れ検知 hook",
+      "reason": "GitHub Projects の進捗自動化を使っていない"
+    }
+  }
+}

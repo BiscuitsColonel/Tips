@@ -1,0 +1,4 @@
+.claude/sensitive-words.local.txt
+__pycache__/
+*.pyc
+.coverage*
